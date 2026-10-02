@@ -26,8 +26,8 @@ export default function PantallaDatos({ onContinuar }) {
   return (
     <div className="pantalla">
       <form className="tarjeta" onSubmit={handleSubmit}>
-        <h1>Bienvenido al Expo 👋</h1>
-        <p className="subtitulo">Regístrate para participar en el reconocimiento facial de la expo.</p>
+        <h1>Bienvenido a la Experiencia ROOM ON de Akamatech</h1>
+        <p className="subtitulo">Regístrate para participar y visita nuestro Stand.</p>
 
         <label htmlFor="nombre">Nombre</label>
         <input id="nombre" type="text" value={nombre} onChange={(e) => setNombre(e.target.value)} autoComplete="given-name" />
@@ -48,7 +48,7 @@ export default function PantallaDatos({ onContinuar }) {
           <label htmlFor="consentimiento" style={{ margin: 0 }}>
             Acepto el aviso de privacidad y doy mi consentimiento expreso para la captura y
             procesamiento de mi imagen facial (dato biométrico) con fines de reconocimiento
-            durante este evento. Mis datos se eliminarán al finalizar el expo.
+            durante este evento. <b>Mis datos se eliminarán al finalizar la expo</b>.
           </label>
         </div>
 

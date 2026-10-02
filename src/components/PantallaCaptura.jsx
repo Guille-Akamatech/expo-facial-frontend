@@ -91,8 +91,7 @@ export default function PantallaCaptura({ participantId, onExito }) {
       <div className="tarjeta">
         <h2>Verificación facial</h2>
         <p className="subtitulo">
-          Coloca tu rostro dentro del óvalo y sigue las instrucciones en pantalla (gira la
-          cabeza cuando se te indique).
+          Coloca tu rostro dentro del óvalo y sigue las instrucciones en pantalla (recuerda que es sólo para fines de la dinámica del evento, tus datos biométricos se eliminarán al finalizar la expo).
         </p>
 
         {!sessionId && (

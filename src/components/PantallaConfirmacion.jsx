@@ -5,8 +5,7 @@ export default function PantallaConfirmacion({ nombre }) {
         <div className="icono-check">✅</div>
         <h1>¡Listo, {nombre}!</h1>
         <p className="subtitulo">
-          Tu registro se completó correctamente. Ya puedes pasar al punto de reconocimiento
-          facial del expo para vivir la experiencia.
+          Tu registro se completó correctamente. Ya puedes pasar al stand de Akamatech en la expo para vivir la experiencia.
         </p>
       </div>
     </div>
