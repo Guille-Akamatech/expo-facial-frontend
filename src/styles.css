@@ -9,8 +9,28 @@ body {
   color: #f1f5f9;
 }
 
-.pantalla {
+.app-shell {
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.encabezado {
+  width: 100%;
+  padding: 14px 20px;
+  display: flex;
+  justify-content: center;
+  background: #0f172a;
+}
+
+.logo-akamatech {
+  height: 32px;
+  width: auto;
+}
+
+.pantalla {
+  flex: 1;
+  min-height: 0;        /* antes decía min-height: 100vh; bórralo */
   display: flex;
   flex-direction: column;
   justify-content: center;

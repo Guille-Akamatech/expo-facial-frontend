@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Encabezado from "./components/Encabezado.jsx";
 import PantallaDatos from "./components/PantallaDatos.jsx";
 import PantallaPreguntas from "./components/PantallaPreguntas.jsx";
 import PantallaCaptura from "./components/PantallaCaptura.jsx";
@@ -41,22 +42,28 @@ export default function App() {
     }
   };
 
+ let contenido;
   if (paso === PASOS.DATOS) {
-    return (
+    contenido = (
       <>
         {error && <p className="error" style={{ textAlign: "center" }}>{error}</p>}
         <PantallaDatos onContinuar={handleDatosListos} />
       </>
     );
+  } else if (paso === PASOS.PREGUNTAS) {
+    contenido = <PantallaPreguntas onContinuar={handlePreguntasListas} />;
+  } else if (paso === PASOS.CAPTURA) {
+    contenido = (
+      <PantallaCaptura participantId={participantId} onExito={() => setPaso(PASOS.CONFIRMACION)} />
+    );
+  } else {
+    contenido = <PantallaConfirmacion nombre={datosPersonales?.nombre} />;
   }
 
-  if (paso === PASOS.PREGUNTAS) {
-    return <PantallaPreguntas onContinuar={handlePreguntasListas} />;
-  }
-
-  if (paso === PASOS.CAPTURA) {
-    return <PantallaCaptura participantId={participantId} onExito={() => setPaso(PASOS.CONFIRMACION)} />;
-  }
-
-  return <PantallaConfirmacion nombre={datosPersonales?.nombre} />;
+  return (
+    <div className="app-shell">
+      <Encabezado />
+      {contenido}
+    </div>
+  );
 }
