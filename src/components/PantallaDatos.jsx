@@ -26,8 +26,8 @@ export default function PantallaDatos({ onContinuar }) {
   return (
     <div className="pantalla">
       <form className="tarjeta" onSubmit={handleSubmit}>
-        <h1>Bienvenido a la Experiencia ROOM ON de Akamatech</h1>
-        <p className="subtitulo">Regístrate para participar y visita nuestro Stand.</p>
+        <h1>Vive la Experiencia ROOM ON de Akamatech</h1>
+        <p className="subtitulo">Regístrate para participar en un recorrido que no explica la tecnología: te permite experimentarla y vivirla. Audio, Video, Colaboración, Automatización e IA integrados.</p>
 
         <label htmlFor="nombre">Nombre</label>
         <input id="nombre" type="text" value={nombre} onChange={(e) => setNombre(e.target.value)} autoComplete="given-name" />
