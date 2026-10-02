@@ -7,6 +7,29 @@ import { AWS_REGION } from "../amplifyConfig.js";
 
 const MAX_INTENTOS = 3;
 
+const temaAkamatech = {
+  name: "Akamatech Liveness Theme",
+  tokens: {
+    colors: {
+      background: {
+        primary: { value: "#1A2E2F" },
+        secondary: { value: "#14262a" },
+      },
+      font: {
+        primary: { value: "#FFFFFF" },
+      },
+      brand: {
+        primary: {
+          10: { value: "#1A2E2F" },
+          80: { value: "#C4FF4D" },
+          90: { value: "#1A2E2F" },
+          100: { value: "#C4FF4D" },
+        },
+      },
+    },
+  },
+};
+
 export default function PantallaCaptura({ participantId, onExito }) {
   const [sessionId, setSessionId] = useState(null);
   const [cargando, setCargando] = useState(false);
@@ -82,7 +105,7 @@ export default function PantallaCaptura({ participantId, onExito }) {
         )}
 
         {sessionId && (
-          <ThemeProvider>
+          <ThemeProvider theme={temaAkamatech}>
             <FaceLivenessDetector
               sessionId={sessionId}
               region={AWS_REGION}
