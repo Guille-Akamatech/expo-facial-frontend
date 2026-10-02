@@ -17,14 +17,14 @@ body {
 
 .encabezado {
   width: 100%;
-  padding: 14px 20px;
+  padding: 14px 14px;
   display: flex;
   justify-content: center;
   background: #0f172a;
 }
 
 .logo-akamatech {
-  height: 32px;
+  height: 24px;
   width: auto;
 }
 
