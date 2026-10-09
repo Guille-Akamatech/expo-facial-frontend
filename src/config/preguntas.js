@@ -12,22 +12,17 @@
 export const PREGUNTAS = [
   {
     id: "comida_favorita",
-    texto: "¿Cuál tipo de comida te gusta más?",
+    texto: "¿Qué tipo de comida te gusta más?",
     opciones: ["China", "Japonesa", "Mexicana", "Italiana", "Francesa"],
   },
   {
     id: "hobby_favorito",
-    texto: "¿Cuál de estos es tu pasatiempo favorito?",
-    opciones: ["Cine", "Leer", "Ejercicio", "Cocinar", "Videojuegos"],
-  },
-  {
-    id: "deporte_favorito",
-    texto: "¿Qué deporte te gusta más?",
-    opciones: ["Fútbol", "Basquetbol", "Béisbol", "Americano", "Golf"],
+    texto: "¿Qué tipo de actividades disfrutas más?",
+    opciones: ["Culturales", "Exteriores", "Deportivas", "Entretenimiento", "Viajes"],
   },
   {
     id: "bebida_favorita", 
     texto: "¿Cuál es tu tipo de bebida favorita?",
-    opciones: ["Café", "Té", "Refresco", "Agua", "Jugo"],
+    opciones: ["Café", "Refresco", "Vino", "Jugo", "Coctelería"],
   },
 ];
