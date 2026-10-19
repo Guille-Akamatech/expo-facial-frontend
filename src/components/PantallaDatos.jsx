@@ -1,4 +1,5 @@
 import { useState } from "react";
+import AvisoPrivacidad from "./AvisoPrivacidad.jsx";
 
 export default function PantallaDatos({ onContinuar }) {
   const [nombre, setNombre] = useState("");
@@ -6,6 +7,7 @@ export default function PantallaDatos({ onContinuar }) {
   const [correo, setCorreo] = useState("");
   const [consentimiento, setConsentimiento] = useState(false);
   const [error, setError] = useState("");
+  const [verAviso, setVerAviso] = useState(false);
 
   const listo = nombre.trim() && apellido.trim() && correo.trim() && consentimiento;
 
@@ -45,11 +47,16 @@ export default function PantallaDatos({ onContinuar }) {
             checked={consentimiento}
             onChange={(e) => setConsentimiento(e.target.checked)}
           />
-          <label htmlFor="consentimiento" style={{ margin: 0 }}>
-            Acepto el aviso de privacidad y doy mi consentimiento expreso para la captura y
-            procesamiento de mi imagen facial (dato biométrico) con fines de reconocimiento
-            durante este evento. <b>Mis datos se eliminarán al finalizar la expo</b>.
-          </label>
+	  <div>
+            <label htmlFor="consentimiento" style={{ margin: 0 }}>
+              Acepto haber leído el aviso de privacidad y doy mi consentimiento expreso para la captura y
+              procesamiento de mi imagen facial (dato biométrico) con fines de participación en este evento.
+	      <b>Mis datos biométricos se eliminarán al finalizar este evento.</b>.
+            </label>
+            <button type="button" className="enlace-aviso" onClick={() => setVerAviso(true)}>
+             Ver aviso de privacidad
+           </button>
+	  </div>
         </div>
 
         {error && <p className="error">{error}</p>}
@@ -58,6 +65,7 @@ export default function PantallaDatos({ onContinuar }) {
           Continuar
         </button>
       </form>
+      {verAviso && <AvisoPrivacidad onCerrar={() => setVerAviso(false)} />}
     </div>
   );
 }
