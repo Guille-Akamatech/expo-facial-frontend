@@ -29,7 +29,7 @@ export default function PantallaDatos({ onContinuar }) {
     <div className="pantalla">
       <form className="tarjeta" onSubmit={handleSubmit}>
         <h1>Vive la Experiencia ROOM ON de Akamatech</h1>
-        <p className="subtitulo">Regístrate para participar en un recorrido que no explica la tecnología: te permite experimentarla y vivirla. Audio, Video, Colaboración, Automatización e IA integrados.</p>
+        <p className="subtitulo">Regístrate y visita nuestro stand para participar en un recorrido que te permite vivir la tecnología. Audio, Video, Colaboración, Automatización e IA todo integrado.</p>
 
         <label htmlFor="nombre">Nombre</label>
         <input id="nombre" type="text" value={nombre} onChange={(e) => setNombre(e.target.value)} autoComplete="given-name" />
@@ -49,8 +49,8 @@ export default function PantallaDatos({ onContinuar }) {
           />
 	  <div>
             <label htmlFor="consentimiento" style={{ margin: 0 }}>
-              Acepto haber leído el aviso de privacidad y doy mi consentimiento expreso para la captura y
-              procesamiento de mi imagen facial (dato biométrico) con fines de participación en este evento. <b>Mis datos biométricos se eliminarán al finalizar este evento.</b>
+              Acepto haber leído el aviso de privacidad y doy mi consentimiento expreso para la captura y procesamiento de mi imagen facial (dato biométrico) con el único fin de participar en esta experiencia.   
+              <b>Mis datos biométricos se eliminarán al finalizar este evento.</b>
             </label>
             <button type="button" className="enlace-aviso" onClick={() => setVerAviso(true)}>
              Ver aviso de privacidad
