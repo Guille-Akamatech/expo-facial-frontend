@@ -50,8 +50,7 @@ export default function PantallaDatos({ onContinuar }) {
 	  <div>
             <label htmlFor="consentimiento" style={{ margin: 0 }}>
               Acepto haber leído el aviso de privacidad y doy mi consentimiento expreso para la captura y
-              procesamiento de mi imagen facial (dato biométrico) con fines de participación en este evento.
-	      <b>Mis datos biométricos se eliminarán al finalizar este evento.</b>.
+              procesamiento de mi imagen facial (dato biométrico) con fines de participación en este evento. <b>Mis datos biométricos se eliminarán al finalizar este evento.</b>
             </label>
             <button type="button" className="enlace-aviso" onClick={() => setVerAviso(true)}>
              Ver aviso de privacidad

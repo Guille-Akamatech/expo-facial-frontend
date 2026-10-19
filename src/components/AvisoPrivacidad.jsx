@@ -44,13 +44,12 @@ export default function AvisoPrivacidad({ onCerrar }) {
           </p>
           <p>
             Los datos personales que recabemos durante su participación en la experiencia &quot;Room
-            On&quot; serán utilizados exclusivamente para gestionar su acceso, participación y dinámica
-            dentro de dicha actividad interactiva.
+            ON&quot; serán utilizados exclusivamente para completar la dinámica dentro de dicha actividad interactiva.
           </p>
           <p>
             Le informamos que sus datos personales no serán compartidos con ningún tercero y que sus datos biométricos serán
             eliminados de forma segura de nuestros registros en un lapso de 24 horas posteriores a la
-            conclusión de la actividad.
+            conclusión de esta actividad.
           </p>
           <p>
             Para consultar nuestro Aviso de Privacidad Integral, puede solicitarlo directamente con
