@@ -1,12 +1,10 @@
 import { useState } from "react";
-import AvisoPrivacidad from "./AvisoPrivacidad.jsx";
 
 export default function PantallaDatos({ onContinuar }) {
   const [nombre, setNombre] = useState("");
   const [apellido, setApellido] = useState("");
   const [correo, setCorreo] = useState("");
   const [consentimiento, setConsentimiento] = useState(false);
-  const [verAviso, setVerAviso] = useState(false);
   const [error, setError] = useState("");
 
   const listo = nombre.trim() && apellido.trim() && correo.trim() && consentimiento;
@@ -28,8 +26,8 @@ export default function PantallaDatos({ onContinuar }) {
   return (
     <div className="pantalla">
       <form className="tarjeta" onSubmit={handleSubmit}>
-        <h1>Bienvenido al Expo 👋</h1>
-        <p className="subtitulo">Regístrate para participar en el reconocimiento facial de la expo.</p>
+        <h1>Vive la Experiencia ROOM ON de Akamatech</h1>
+        <p className="subtitulo">Regístrate para participar en un recorrido que no explica la tecnología: te permite experimentarla y vivirla. Audio, Video, Colaboración, Automatización e IA integrados.</p>
 
         <label htmlFor="nombre">Nombre</label>
         <input id="nombre" type="text" value={nombre} onChange={(e) => setNombre(e.target.value)} autoComplete="given-name" />
@@ -47,16 +45,11 @@ export default function PantallaDatos({ onContinuar }) {
             checked={consentimiento}
             onChange={(e) => setConsentimiento(e.target.checked)}
           />
-          <div>
-            <label htmlFor="consentimiento" style={{ margin: 0 }}>
-              Acepto el aviso de privacidad y doy mi consentimiento expreso para la captura y
-              procesamiento de mi imagen facial (dato biométrico) con fines de reconocimiento
-              durante este evento. Mis datos se eliminarán al finalizar la expo.
-            </label>
-            <button type="button" className="enlace-aviso" onClick={() => setVerAviso(true)}>
-              Ver aviso de privacidad
-            </button>
-          </div>
+          <label htmlFor="consentimiento" style={{ margin: 0 }}>
+            Acepto el aviso de privacidad y doy mi consentimiento expreso para la captura y
+            procesamiento de mi imagen facial (dato biométrico) con fines de reconocimiento
+            durante este evento. <b>Mis datos se eliminarán al finalizar la expo</b>.
+          </label>
         </div>
 
         {error && <p className="error">{error}</p>}
@@ -65,8 +58,6 @@ export default function PantallaDatos({ onContinuar }) {
           Continuar
         </button>
       </form>
-
-      {verAviso && <AvisoPrivacidad onCerrar={() => setVerAviso(false)} />}
     </div>
   );
 }
